@@ -11,6 +11,11 @@ pipeline {
         sh 'mvn clean install'
       }
     }
+    stage('Deployement') {
+      steps {
+        echo 'Deploying code'
+      }
+    }
   }
   environment {
     library = 'library'
