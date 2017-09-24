@@ -8,7 +8,8 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'mvn clean install'
+        build 'build \'gdramesh09/LibraryManagement/master\''
+        echo 'Build sucess'
       }
     }
     stage('Deployement') {
