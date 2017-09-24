@@ -6,6 +6,11 @@ pipeline {
         echo 'Build is success'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'mvn clean install'
+      }
+    }
   }
   environment {
     library = 'library'
